@@ -3,7 +3,9 @@ let body =document.body
 let period9 = document.createElement('button')
 period9.setAttribute('id', 'selectperiod')
 period9.innerHTML = 'Period 9'
-body.append(period9)
+
+let bottomleft=document.getElementById('bottomleft')
+bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
     for(let i =0; i<period9.length; i++){
         let card = document.createElement('button')
