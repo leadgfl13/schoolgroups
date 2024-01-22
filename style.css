@@ -1,3 +1,28 @@
 body{
     background-color:Teal;
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+#card{
+    height:50px;
+    width:200px;
+    background-color:gray;
+    text-align:Center;
+    border:2px black solid;
+    font-size:20px;
+}
+
+
+#selectperiod{
+    height:200px;
+    width:200px;
+    box-shadow:2px 2px 2px 2px;
+    border-radius:10px;
+    border-color:orange;
+    font-size:20px;
+    color:skyblue;
+    background-color:gray;
 }
