@@ -1,6 +1,7 @@
 //global variables
 let body =document.body
 let bottomleft=document.getElementById('bottomleft')
+let period = 0
 //function for 
 function makebuttons(period){
     bottomright.innerHTML = ''
@@ -21,7 +22,7 @@ period9.setAttribute('id', 'selectperiod')
 period9.innerHTML = 'Period 9'
 bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
-    let p9 = true
+    period = 9    
     if(bottomright.innerHTML){
         period9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
@@ -30,7 +31,6 @@ period9.addEventListener('click', ()=>{
     else{
     makebuttons(period9)
         }
-        return(p9)
     }
 )
 
@@ -40,7 +40,7 @@ period4.setAttribute('id', 'selectperiod')
 period4.innerHTML = 'Period 4'
 bottomleft.append(period4)
 period4.addEventListener('click', ()=>{
-    let p4 = true
+    period = 4
     if(bottomright.innerHTML){
         period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
@@ -49,8 +49,9 @@ period4.addEventListener('click', ()=>{
     else{
     makebuttons(period4)
         }
-        return(p4)
+
     }
+
 )
 
 period9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
@@ -58,3 +59,20 @@ period9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','
 
 period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
+
+
+let check = document.createElement('button')
+check.innerHTML = 'check'
+check.setAttribute('id', 'selectperiod')
+bottomleft.append(check)
+check.addEventListener('click',()=>{
+    if(period == 4){
+        console.log('Period4 is seleected')
+    }
+    else if(period == 9){
+        console.log('period 9 is selected')
+    }
+    else{
+        console.log('No period selected')
+    }
+})
