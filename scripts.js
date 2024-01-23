@@ -1,4 +1,5 @@
 let body =document.body
+let bottomright=document.getElementById('bottomright')
 
 let period9 = document.createElement('button')
 period9.setAttribute('id', 'selectperiod')
@@ -10,7 +11,10 @@ period9.addEventListener('click', ()=>{
     for(let i =0; i<period9.length; i++){
         let card = document.createElement('button')
         card.setAttribute('id','card')
-        body.append(card)
+        card.addEventListener('click',()=>{
+            console.log(`hello, I am ${period9[i]}`)
+        })
+        bottomright.append(card)
         card.innerHTML = period9[i]
     }
 })
