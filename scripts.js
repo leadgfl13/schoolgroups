@@ -10,9 +10,9 @@ function makebuttons(period){
         card.innerHTML = period[i]
         bottomright.append(card)
         card.addEventListener('click',()=>{
-            period9.splice(i,1)
+            period.splice(i,1)
             makebuttons(period)
-            console.log(period9)
+            console.log(period)
 })}}
 
 // button to create period 9 roster
@@ -34,7 +34,27 @@ period9.addEventListener('click', ()=>{
     }
 )
 
+// button to create period 4 roster
+let period4 = document.createElement('button')
+period4.setAttribute('id', 'selectperiod')
+period4.innerHTML = 'Period 4'
+bottomleft.append(period4)
+period4.addEventListener('click', ()=>{
+    let p4 = true
+    if(bottomright.innerHTML){
+        period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
+'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
+        makebuttons(period4)
+    }
+    else{
+    makebuttons(period4)
+        }
+        return(p4)
+    }
+)
 
 period9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
 , 'Rodney']
 
+period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
+'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
