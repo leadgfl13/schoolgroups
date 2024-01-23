@@ -18,6 +18,11 @@ body{
 .bottomleft{
     grid-area:2/1/3/2;
     background-color:beige;
+    display:flex;
+    flex-direction:column;
+    gap:80px;
+    align-items:center;
+    justify-content:center;
 }
 #card{
     height:50px;
@@ -43,4 +48,8 @@ body{
 #bottomright{
     grid-area:2/2/3/3;
     background-color: blueviolet;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, 200px);
+    grid-template-rows:(1fr, auto);
+    gap:20px;
 }
