@@ -53,3 +53,20 @@ body{
     grid-template-rows:(1fr, auto);
     gap:20px;
 }
+
+
+#topright{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+}
+#groups{
+    border:2px solid salmon;
+    height:200px;
+    width:200px;
+    background-color:steelblue;
+    font-size:32px;
+    box-shadow: 2px 2px 2px 2px;
+    border-radius:15px;
+}

@@ -2,7 +2,16 @@
 let body =document.body
 let bottomleft=document.getElementById('bottomleft')
 let period = 0
-//function for 
+let topright =document.getElementById('topright')
+
+period_9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
+, 'Rodney']
+
+period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
+'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
+
+
+//function for  making buttons depending on the period
 function makebuttons(period){
     bottomright.innerHTML = ''
     for(let i =0; i<period.length; i++){
@@ -16,7 +25,7 @@ function makebuttons(period){
             console.log(period)
 })}}
 
-// button to create period 9 roster
+//button for period 9
 let period9 = document.createElement('button')
 period9.setAttribute('id', 'selectperiod')
 period9.innerHTML = 'Period 9'
@@ -26,10 +35,10 @@ period9.addEventListener('click', ()=>{
     if(bottomright.innerHTML){
         period9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
-        makebuttons(period9)
+        makebuttons(period_9)
     }
     else{
-    makebuttons(period9)
+    makebuttons(period_9)
         }
     }
 )
@@ -44,23 +53,17 @@ period4.addEventListener('click', ()=>{
     if(bottomright.innerHTML){
         period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
-        makebuttons(period4)
+        makebuttons(period_4)
     }
     else{
-    makebuttons(period4)
+    makebuttons(period_4)
         }
 
     }
 
 )
 
-period9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
-, 'Rodney']
-
-period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
-'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
-
-
+//check button just to make sure that THere is a record of which group is selected
 let check = document.createElement('button')
 check.innerHTML = 'check'
 check.setAttribute('id', 'selectperiod')
@@ -76,3 +79,20 @@ check.addEventListener('click',()=>{
         console.log('No period selected')
     }
 })
+
+//buttons for which grouping
+let group2 = document.createElement('button')
+group2.setAttribute('id','groups')
+group2.innerHTML = 'Groups of 2'
+topright.append(group2)
+
+
+let group3 = document.createElement('button')
+group3.setAttribute('id','groups')
+group3.innerHTML = 'Groups of 3'
+topright.append(group3)
+
+let group4 = document.createElement('button')
+group4.setAttribute('id','groups')
+group4.innerHTML = 'Groups of 4'
+topright.append(group4)
