@@ -3,8 +3,8 @@ let body =document.body
 let bottomleft=document.getElementById('bottomleft')
 let period = 0
 let topright =document.getElementById('topright')
-
-
+var size = 0
+random_array = []
 //--------------------the rosters------------------------
 period_9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
 , 'Rodney']
@@ -35,7 +35,7 @@ bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
     period = 9    
     if(bottomright.innerHTML){
-        period9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
+        period_9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
         makebuttons(period_9)
     }
@@ -53,7 +53,7 @@ bottomleft.append(period4)
 period4.addEventListener('click', ()=>{
     period = 4
     if(bottomright.innerHTML){
-        period4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
+        period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
         makebuttons(period_4)
     }
@@ -98,26 +98,48 @@ let group4 = document.createElement('button')
 group4.setAttribute('id','groups')
 group4.innerHTML = 'Groups of 4'
 topright.append(group4)
-group4.addEventListener('click',makeGroup)
+group4.addEventListener('click', ()=>{
+     size = +(4);
+})//need to make it so that the period can be switched...
+group4.addEventListener('click',()=>{makeGroup(period_9, size)})
 
 
 //--------------create function to randomize roster
 
-function randomizer(anarray){
-    for(let i =anarray.length -1; i>0; i--){
+
+
+
+//combining functions under the makeGroup function
+//makeGroup takes two arguments, then class array and the groupsize
+//randomizer randomizes the array, and then returns it
+//grouper takes randomized array and group size, then breaks them into groups
+function makeGroup(periodarray, groupsize){
+    randomizer(periodarray)
+    grouper(periodarray, groupsize)
+    
+    
+    
+}
+
+//randomizer takes an array and returns a randomized order
+function randomizer(thing){
+    for(let i =thing.length -1; i>0; i--){
         const j = Math.floor(Math.random() * (i+1))
-        temp = anarray[i]
-        anarray[i] = anarray[j]
-        anarray[j] = temp
+        temp = thing[i]
+        thing[i] = thing[j]
+        thing[j] = temp
     } 
-    return[anarray]
-}
+    return[thing]}
 
-
-//------function for splitting up groups
-function makeGroup(groupsize){
-    if (period == 4){console.log(randomizer(period_4))
-    
-    
-}
-}
+//grouper takes an array and a number and  then splits the array into those numbers //need to fix this
+function grouper(anarray, a_numb){
+    let newgroup=[]
+    console.log(anarray)
+    console.log(a_numb)
+    while(anarray.length > a_numb){
+        for(let i =0; i > a_numb; i++){
+            let student = anarray.pop()
+            newgroup.push(student)
+        }
+        console.log[newgroup]
+    }}
