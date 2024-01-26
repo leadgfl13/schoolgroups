@@ -6,25 +6,32 @@ let topright =document.getElementById('topright')
 var size = 0
 random_array = []
 //--------------------the rosters------------------------
-period_9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
+
+//can I make a function that just returns an array?
+let period_9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
 , 'Rodney']
+
 
 period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
 
 
 //--------------------function for making the student buttons depending on the period
-function makebuttons(period){
+function makebuttons9(){
+    console.log('hello')
+    console.log()
+
+   
     bottomright.innerHTML = ''
-    for(let i =0; i<period.length; i++){
+    for(let i =0; i<period_9.length; i++){
         let card = document.createElement('button')
         card.setAttribute('id','card')
-        card.innerHTML = period[i]
+        card.innerHTML = period_9[i]
         bottomright.append(card)
         card.addEventListener('click',()=>{
-            period.splice(i,1)
-            makebuttons(period)
-            console.log(period)
+            period_9.splice(i,1)
+            makebuttons9()
+            console.log(period_9)
 })}}
 
 //----------------button to create  period9 
@@ -33,14 +40,15 @@ period9.setAttribute('id', 'selectperiod')
 period9.innerHTML = 'Period 9'
 bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
-    period = 9    
+
     if(bottomright.innerHTML){
         period_9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
-        makebuttons(period_9)
+        makebuttons9(period_9)
     }
     else{
-    makebuttons(period_9)
+
+    makebuttons9()
         }
     })
 
