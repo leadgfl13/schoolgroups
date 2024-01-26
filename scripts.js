@@ -1,10 +1,7 @@
 //--------------------global variables
 let body =document.body
 let bottomleft=document.getElementById('bottomleft')
-let period = 0
 let topright =document.getElementById('topright')
-var size = 0
-random_array = []
 //--------------------the rosters------------------------
 
 //can I make a function that just returns an array?
@@ -87,47 +84,14 @@ check.addEventListener('click',()=>{
     }
 })
 
-//---------------buttons for groupings
+//---------------buttons for 2 groupings
 let group2 = document.createElement('button')
 group2.setAttribute('id','groups')
 group2.innerHTML = 'Groups of 2'
 topright.append(group2)
-group2.addEventListener('click',makeGroup)
+group2.addEventListener('click',makeGroups2)
 
 
-let group3 = document.createElement('button')
-group3.setAttribute('id','groups')
-group3.innerHTML = 'Groups of 3'
-topright.append(group3)
-group3.addEventListener('click',makeGroup)
-
-
-let group4 = document.createElement('button')
-group4.setAttribute('id','groups')
-group4.innerHTML = 'Groups of 4'
-topright.append(group4)
-group4.addEventListener('click', ()=>{
-     size = +(4);
-})//need to make it so that the period can be switched...
-group4.addEventListener('click',()=>{makeGroup(period_9, size)})
-
-
-//--------------create function to randomize roster
-
-
-
-
-//combining functions under the makeGroup function
-//makeGroup takes two arguments, then class array and the groupsize
-//randomizer randomizes the array, and then returns it
-//grouper takes randomized array and group size, then breaks them into groups
-function makeGroup(periodarray, groupsize){
-    randomizer(periodarray)
-    grouper(periodarray, groupsize)
-    
-    
-    
-}
 
 //randomizer takes an array and returns a randomized order
 function randomizer(thing){
@@ -137,17 +101,38 @@ function randomizer(thing){
         thing[i] = thing[j]
         thing[j] = temp
     } 
-    return[thing]}
+    return(thing)
+}
 
-//grouper takes an array and a number and  then splits the array into those numbers //need to fix this
-function grouper(anarray, a_numb){
-    let newgroup=[]
-    console.log(anarray)
-    console.log(a_numb)
-    while(anarray.length > a_numb){
-        for(let i =0; i > a_numb; i++){
-            let student = anarray.pop()
-            newgroup.push(student)
-        }
-        console.log[newgroup]
-    }}
+
+
+
+
+    // this function is make a group.  we assign rand_array as the result of running makeArray, which returns the array of students left when they are clicked
+function makeGroups2(){
+    let size = 2
+    let rand_array= makeArray()    
+    console.log(rand_array)
+   let x = randomizer(rand_array)
+    console.log(x)
+
+    
+//way to make an array from the elements on the page, returns the array
+function makeArray(){
+    let rand_array = []
+    let array_holder=document.getElementById('bottomright')
+    let children = array_holder.children
+    for(let i = 0; i<children.length; i++){
+        let identifier = children[i].innerHTML
+        rand_array.push(identifier)
+    }
+    console.log(rand_array)
+    return (rand_array)
+
+}
+
+}   
+ // let size = 2
+    // let array = random array
+    // do stuff here
+    //}
