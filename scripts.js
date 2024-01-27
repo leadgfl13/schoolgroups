@@ -131,19 +131,33 @@ function makeArray(){
 
 }   
  function splitGroups(thelist, groupsize){
+    bottomright.innerHTML = ''
+    bottomright.setAttribute('id','bottomright2')
+    bottomright = document.getElementById('bottomright2')
     console.log(thelist.length)
-    while(thelist.length >=groupsize){
+    let x = 1
+
+    while(thelist.length >groupsize){
         let grouping = []
+
         for(let i = 0; i<=groupsize+1; i++){
             let popped = thelist.pop()
             grouping.push(popped)
             
         }
-    if(thelist){
+        groups = document.createElement('div')
+        groups.setAttribute('id','group')
+        groupy = document.getElementById('group')
+        bottomright.append(groups)
+        groups.innerHTML = 'Group'+ x + grouping
+        x++
+    }
+    if(thelist.length){
         console.log(thelist)
+        finalgroup =document.createElement('div')
+        bottomright.append(finalgroup)
+        finalgroup.innerHTML = 'Final Group' + (thelist)
     }
-console.log(grouping)
-    }
-
 
  }
+ 
