@@ -112,9 +112,8 @@ function randomizer(thing){
 function makeGroups2(){
     let size = 2
     let rand_array= makeArray()    
-    console.log(rand_array)
    let x = randomizer(rand_array)
-    console.log(x)
+    let y =splitGroups(x,size)
 
     
 //way to make an array from the elements on the page, returns the array
@@ -126,13 +125,25 @@ function makeArray(){
         let identifier = children[i].innerHTML
         rand_array.push(identifier)
     }
-    console.log(rand_array)
     return (rand_array)
 
 }
 
 }   
- // let size = 2
-    // let array = random array
-    // do stuff here
-    //}
+ function splitGroups(thelist, groupsize){
+    console.log(thelist.length)
+    while(thelist.length >=groupsize){
+        let grouping = []
+        for(let i = 0; i<=groupsize+1; i++){
+            let popped = thelist.pop()
+            grouping.push(popped)
+            
+        }
+    if(thelist){
+        console.log(thelist)
+    }
+console.log(grouping)
+    }
+
+
+ }
