@@ -81,40 +81,31 @@ period4.addEventListener('click', ()=>{
     })
 
 //--------check button just to make sure that there is a record of which group is selected
-let check = document.createElement('button')
-check.innerHTML = 'check'
-check.setAttribute('id', 'selectperiod')
-bottomleft.append(check)
-check.addEventListener('click',()=>{
-    if(period == 4){
-        console.log('Period4 is seleected')
-    }
-    else if(period == 9){
-        console.log('period 9 is selected')
-    }
-    else{
-        console.log('No period selected')
-    }
+let reset = document.createElement('button')
+reset.innerHTML = 'reset'
+reset.setAttribute('id', 'selectperiod')
+bottomleft.append(reset)
+reset.addEventListener('click',()=>{
+    location.reload()
 })
 
-//---------------buttons for 2 groupings
 
+
+
+
+//---------------buttons to select what size groups-----------
 let group2 = document.createElement('button')
 group2.setAttribute('id','groups')
 group2.innerHTML = 'Groups of 2'
 topright.append(group2)
 group2.addEventListener('click', makeGroups2)
-
-//-------------buttons for 3 groupings
-
+//-------------------------
 let group3 = document.createElement('button')
 group3.setAttribute('id','groups')
 group3.innerHTML = 'Groups of 3'
 topright.append(group3)
 group3.addEventListener('click', makeGroups3)
-
-//-------------buttons for 4 groupings
-
+//------------------------
 let group4 = document.createElement('button')
 group4.setAttribute('id','groups')
 group4.innerHTML = 'Groups of 4'
@@ -122,7 +113,10 @@ topright.append(group4)
 group4.addEventListener('click',makeGroups4)
 
 
-//randomizer takes an array and returns a randomized order
+
+
+
+//function to randomize the order of students
 function randomizer(thing){
     for(let i =thing.length -1; i>0; i--){
         const j = Math.floor(Math.random() * (i+1))
@@ -137,7 +131,7 @@ function randomizer(thing){
 
 
 
-    // this function is make a group.  we assign rand_array as the result of running makeArray, which returns the array of students left when they are clicked
+//  function that holds all functions to make a group.  declares size, stores the outcome of randomizer, and then calls splitgroups
 function makeGroups4(){
     let size = 4
     let rand_array= makeArray()    
@@ -150,7 +144,6 @@ function makeGroups2(){
     let x = randomizer(rand_array)
     let y =splitGroups(x,size)   
 }
-
 function makeGroups3(){
     let size = 3
     let rand_array= makeArray()    
@@ -158,6 +151,10 @@ function makeGroups3(){
     let y =splitGroups(x,size)   
 }
     
+
+
+
+
 //way to make an array from the elements on the page, returns the array
 function makeArray(){
     let rand_array = []
@@ -168,10 +165,13 @@ function makeArray(){
         rand_array.push(identifier)
     }
     return (rand_array)
-
 }
 
 
+
+
+
+// function that takes the random array and splits it based on groupsize.  Then puts it on the Page
  function splitGroups(thelist, groupsize){
     bottomright.innerHTML = ''
     bottomright.setAttribute('id','bottomright2')
@@ -181,7 +181,6 @@ function makeArray(){
 
     while(thelist.length >groupsize){
         let grouping = []
-
         for(let i = 0; i<=groupsize-1; i++){
             let popped = thelist.pop()
             grouping.push(popped)
@@ -201,5 +200,4 @@ function makeArray(){
         bottomright.append(finalgroup)
         finalgroup.innerHTML = 'Final Group: ' + (thelist)
     }
-
  }
