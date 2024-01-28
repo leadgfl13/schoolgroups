@@ -5,20 +5,18 @@ let topright =document.getElementById('topright')
 //--------------------the rosters------------------------
 
 //can I make a function that just returns an array?
-let period_9=['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
-, 'Rodney']
+let period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
+, ' Rodney']
 
 
-period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
-'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
+period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
 
 
-//--------------------function for making the student buttons depending on the period
+//--------------------function formaking student cards appear
 function makebuttons9(){
     console.log('hello')
     console.log()
-
-   
     bottomright.innerHTML = ''
     for(let i =0; i<period_9.length; i++){
         let card = document.createElement('button')
@@ -29,6 +27,21 @@ function makebuttons9(){
             period_9.splice(i,1)
             makebuttons9()
             console.log(period_9)
+})}}
+
+function makebuttons4(){
+    console.log('hello')
+    console.log()
+    bottomright.innerHTML = ''
+    for(let i =0; i<period_4.length; i++){
+        let card = document.createElement('button')
+        card.setAttribute('id','card')
+        card.innerHTML = period_4[i]
+        bottomright.append(card)
+        card.addEventListener('click',()=>{
+            period_4.splice(i,1)
+            makebuttons4()
+            console.log(period_4)
 })}}
 
 //----------------button to create  period9 
@@ -60,10 +73,10 @@ period4.addEventListener('click', ()=>{
     if(bottomright.innerHTML){
         period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
 'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
-        makebuttons(period_4)
+        makebuttons4(period_4)
     }
     else{
-    makebuttons(period_4)
+    makebuttons4()
  }
     })
 
@@ -85,12 +98,28 @@ check.addEventListener('click',()=>{
 })
 
 //---------------buttons for 2 groupings
+
 let group2 = document.createElement('button')
 group2.setAttribute('id','groups')
 group2.innerHTML = 'Groups of 2'
 topright.append(group2)
-group2.addEventListener('click',makeGroups2)
+group2.addEventListener('click', makeGroups2)
 
+//-------------buttons for 3 groupings
+
+let group3 = document.createElement('button')
+group3.setAttribute('id','groups')
+group3.innerHTML = 'Groups of 3'
+topright.append(group3)
+group3.addEventListener('click', makeGroups3)
+
+//-------------buttons for 4 groupings
+
+let group4 = document.createElement('button')
+group4.setAttribute('id','groups')
+group4.innerHTML = 'Groups of 4'
+topright.append(group4)
+group4.addEventListener('click',makeGroups4)
 
 
 //randomizer takes an array and returns a randomized order
@@ -109,12 +138,25 @@ function randomizer(thing){
 
 
     // this function is make a group.  we assign rand_array as the result of running makeArray, which returns the array of students left when they are clicked
-function makeGroups2(){
-    let size = 2
+function makeGroups4(){
+    let size = 4
     let rand_array= makeArray()    
    let x = randomizer(rand_array)
     let y =splitGroups(x,size)
+}
+function makeGroups2(){
+    let size = 2
+    let rand_array= makeArray()    
+    let x = randomizer(rand_array)
+    let y =splitGroups(x,size)   
+}
 
+function makeGroups3(){
+    let size = 3
+    let rand_array= makeArray()    
+    let x = randomizer(rand_array)
+    let y =splitGroups(x,size)   
+}
     
 //way to make an array from the elements on the page, returns the array
 function makeArray(){
@@ -129,7 +171,7 @@ function makeArray(){
 
 }
 
-}   
+
  function splitGroups(thelist, groupsize){
     bottomright.innerHTML = ''
     bottomright.setAttribute('id','bottomright2')
@@ -140,7 +182,7 @@ function makeArray(){
     while(thelist.length >groupsize){
         let grouping = []
 
-        for(let i = 0; i<=groupsize+1; i++){
+        for(let i = 0; i<=groupsize-1; i++){
             let popped = thelist.pop()
             grouping.push(popped)
             
@@ -149,15 +191,15 @@ function makeArray(){
         groups.setAttribute('id','group')
         groupy = document.getElementById('group')
         bottomright.append(groups)
-        groups.innerHTML = 'Group'+ x + grouping
+        groups.innerHTML = 'Group '+ x + ': ' + grouping
         x++
     }
     if(thelist.length){
         console.log(thelist)
         finalgroup =document.createElement('div')
+        finalgroup.setAttribute('id','final')
         bottomright.append(finalgroup)
-        finalgroup.innerHTML = 'Final Group' + (thelist)
+        finalgroup.innerHTML = 'Final Group: ' + (thelist)
     }
 
  }
- 

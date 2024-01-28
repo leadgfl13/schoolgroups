@@ -59,8 +59,10 @@ body{
     flex-direction:column;
     grid-area:2/2/3/3;
     background-color: blueviolet;
+    align-items:center;
+    justify-content:center;
   
-    gap:200px;
+    gap:100px;
 
 }
 
@@ -81,10 +83,33 @@ body{
 }
 
 #group{
-    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
     height:200px;
-    width:500px;
+    width:75%;
     border:4px lightgray;
+    box-shadow:2px 2px 2px 2px;
+    border-radius:20px;
     background-color:green;
     border:5px black solid;
+    text-align:center;
+
+}
+
+#final{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    height:200px;
+    width:75%;
+    border:4px lightgray;
+    box-shadow:2px 2px 2px 2px;
+    border-radius:20px;
+    background-color:green;
+    border:5px black solid;
+    text-align:center;
+
 }
