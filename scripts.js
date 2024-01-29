@@ -22,6 +22,16 @@ function makebuttons9(){
         card.setAttribute('id','card')
         card.innerHTML = period_9[i]
         bottomright.append(card)
+        card.addEventListener('mouseover',()=>{
+            card.innerHTML='remove'
+            card.style.backgroundColor = 'red'
+
+        })
+        card.addEventListener('mouseleave',()=>{
+            card.innerHTML=period_9[i]
+            card.style.backgroundColor = 'gray'
+
+        })
         card.addEventListener('click',()=>{
             period_9.splice(i,1)
             makebuttons9()
