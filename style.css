@@ -20,10 +20,11 @@ body{
     background-color:beige;
     display:flex;
     flex-direction:column;
-    gap:80px;
+    gap:40px;
     align-items:center;
-    justify-content:center;
+    padding-top:60px;
 }
+
 #card{
     height:50px;
     width:200px;
@@ -35,22 +36,23 @@ body{
 
 
 #selectperiod{
-    height:200px;
+    height:100px;
     width:200px;
     box-shadow:2px 2px 2px 2px;
     border-radius:10px;
-    border-color:orange;
-    font-size:20px;
-    color:skyblue;
-    background-color:gray;
+    font-size:26px;
+    color:rgb(6, 7, 7);
+    background-color:rgb(73, 160, 129);
 }
 
 #bottomright{
+align-items:center;
+justify-content:center;
     grid-area:2/2/3/3;
-    background-color: blueviolet;
+    background-color: rgb(193, 215, 219);
     display:grid;
+    grid-template-rows:repeat(auto-fill, 100px);
     grid-template-columns:repeat(auto-fill, 200px);
-    grid-template-rows:(1fr, auto);
     gap:20px;
 }
 
@@ -58,11 +60,10 @@ body{
     display:flex;
     flex-direction:column;
     grid-area:2/2/3/3;
-    background-color: blueviolet;
+    background-color: rgb(193, 215, 219);
     align-items:center;
-    justify-content:center;
-  
-    gap:100px;
+    gap:40px;
+    padding-top:15%;
 
 }
 
@@ -71,28 +72,38 @@ body{
     gap:30px;
     justify-content:center;
     align-items:center;
+    background-color:rgb(182, 193, 182);
+
 }
 #groups{
-    border:2px solid salmon;
-    height:200px;
+    margin:30px;
+    border:2px solid black;
+    height:125px;
     width:200px;
-    background-color:steelblue;
+    background-color:rgb(85, 138, 182);
     font-size:32px;
     box-shadow: 2px 2px 2px 2px;
     border-radius:15px;
 }
 
+#topleft{
+    border:groove 6px gray;
+    font-size:36px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(182, 193, 182);
+}
 #group{
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:36px;
-    height:200px;
-    width:75%;
+    width:50%;
     border:4px lightgray;
     box-shadow:2px 2px 2px 2px;
     border-radius:20px;
-    background-color:green;
+    background-color:rgb(173, 196, 173);
     border:5px black solid;
     text-align:center;
 
@@ -103,12 +114,27 @@ body{
     justify-content:center;
     align-items:center;
     font-size:36px;
-    height:200px;
-    width:75%;
+    width:50%;
     border:4px lightgray;
     box-shadow:2px 2px 2px 2px;
     border-radius:20px;
-    background-color:green;
+    background-color:rgb(173, 196, 173);
+    border:5px black solid;
+    text-align:center;
+
+}
+
+#reset2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    width:50%;
+    height:70%;
+    border:4px lightgray;
+    box-shadow:2px 2px 2px 2px;
+    border-radius:20px;
+    background-color:rgb(219, 1, 59);
     border:5px black solid;
     text-align:center;
 

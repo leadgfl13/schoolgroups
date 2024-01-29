@@ -2,9 +2,8 @@
 let body =document.body
 let bottomleft=document.getElementById('bottomleft')
 let topright =document.getElementById('topright')
-//--------------------the rosters------------------------
 
-//can I make a function that just returns an array?
+//--------------------the rosters------------------------
 let period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
 , ' Rodney']
 
@@ -51,16 +50,17 @@ period9.innerHTML = 'Period 9'
 bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
 
+
     if(bottomright.innerHTML){
         period_9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
         makebuttons9(period_9)
     }
     else{
-
     makebuttons9()
         }
     })
+
 
 
 //----------------button to create period 4
@@ -82,7 +82,7 @@ period4.addEventListener('click', ()=>{
 
 //--------check button just to make sure that there is a record of which group is selected
 let reset = document.createElement('button')
-reset.innerHTML = 'reset'
+reset.innerHTML = 'Reset'
 reset.setAttribute('id', 'selectperiod')
 bottomleft.append(reset)
 reset.addEventListener('click',()=>{
@@ -137,18 +137,43 @@ function makeGroups4(){
     let rand_array= makeArray()    
    let x = randomizer(rand_array)
     let y =splitGroups(x,size)
+    topright.innerHTML = ''
+    bottomleft.innerHTML = ''
+    let reset2 = document.createElement('button')
+    reset2.innerHTML = 'RESET'
+    reset2.setAttribute('id','reset2')
+    reset2.addEventListener('click',()=>
+    location.reload())
+    topright.append(reset2)
+
 }
 function makeGroups2(){
     let size = 2
     let rand_array= makeArray()    
     let x = randomizer(rand_array)
-    let y =splitGroups(x,size)   
+    let y =splitGroups(x,size) 
+    topright.innerHTML = ''
+    bottomleft.innerHTML = ''  
+    let reset2 = document.createElement('button')
+    reset2.innerHTML = 'RESET'
+    reset2.setAttribute('id','reset2')
+    reset2.addEventListener('click',()=>
+    location.reload())
+    topright.append(reset2)
 }
 function makeGroups3(){
     let size = 3
     let rand_array= makeArray()    
     let x = randomizer(rand_array)
     let y =splitGroups(x,size)   
+    topright.innerHTML = ''
+    bottomleft.innerHTML = ''
+    let reset2 = document.createElement('button')
+    reset2.innerHTML = 'RESET'
+    reset2.setAttribute('id','reset2')
+    reset2.addEventListener('click',()=>
+    location.reload())
+    topright.append(reset2)
 }
     
 
