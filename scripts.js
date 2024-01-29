@@ -29,8 +29,6 @@ function makebuttons9(){
 })}}
 
 function makebuttons4(){
-    console.log('hello')
-    console.log()
     bottomright.innerHTML = ''
     for(let i =0; i<period_4.length; i++){
         let card = document.createElement('button')
@@ -40,7 +38,6 @@ function makebuttons4(){
         card.addEventListener('click',()=>{
             period_4.splice(i,1)
             makebuttons4()
-            console.log(period_4)
 })}}
 
 //----------------button to create  period9 
@@ -52,11 +49,14 @@ period9.addEventListener('click', ()=>{
 
 
     if(bottomright.innerHTML){
-        period_9 =['Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
+        period_9 =[' Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
         , 'Rodney']
-        makebuttons9(period_9)
+        makebuttons9()
     }
     else{
+         period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
+, ' Rodney']
+        makebuttons9()
     makebuttons9()
         }
     })
@@ -71,11 +71,16 @@ bottomleft.append(period4)
 period4.addEventListener('click', ()=>{
     period = 4
     if(bottomright.innerHTML){
-        period_4 = ['Angelo','Landyn','Owen','Zach','John','Jackson','Matt','Amarah','Kiana','Lili','Nadia','Javier','Kerrigan',
-'Josiash','Jenna','Miranda','Damien','Gabe','Iziah','Neveah']
-        makebuttons4(period_4)
+        period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
+
+        makebuttons4()
     }
+    
     else{
+        period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
+
     makebuttons4()
  }
     })
@@ -133,6 +138,9 @@ function randomizer(thing){
 
 //  function that holds all functions to make a group.  declares size, stores the outcome of randomizer, and then calls splitgroups
 function makeGroups4(){
+    if(bottomright.innerHTML ==''){
+        alert('Please select a class dumb dumb')
+return    }
     let size = 4
     let rand_array= makeArray()    
    let x = randomizer(rand_array)
@@ -145,9 +153,13 @@ function makeGroups4(){
     reset2.addEventListener('click',()=>
     location.reload())
     topright.append(reset2)
-
 }
+
+
 function makeGroups2(){
+    if(bottomright.innerHTML ==''){
+        alert('Please select a class dumb dumb')
+return    }
     let size = 2
     let rand_array= makeArray()    
     let x = randomizer(rand_array)
@@ -162,6 +174,9 @@ function makeGroups2(){
     topright.append(reset2)
 }
 function makeGroups3(){
+    if(bottomright.innerHTML ==''){
+        alert('Please select a class dumb dumb')
+return    }
     let size = 3
     let rand_array= makeArray()    
     let x = randomizer(rand_array)

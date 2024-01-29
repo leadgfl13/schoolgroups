@@ -23,6 +23,7 @@ body{
     gap:40px;
     align-items:center;
     padding-top:60px;
+    border-right:2px solid black;
 }
 
 #card{
@@ -63,16 +64,18 @@ justify-content:center;
     background-color: rgb(193, 215, 219);
     align-items:center;
     gap:40px;
-    padding-top:15%;
+    padding-top:5%;
 
 }
 
 #topright{
+    height:200px;
     display:flex;
     gap:30px;
     justify-content:center;
     align-items:center;
     background-color:rgb(182, 193, 182);
+    border-bottom:solid 2px black;
 
 }
 #groups{
@@ -90,6 +93,7 @@ justify-content:center;
     border:groove 6px gray;
     font-size:36px;
     display:flex;
+    text-align:center;
     justify-content:center;
     align-items:center;
     background-color:rgb(182, 193, 182);
