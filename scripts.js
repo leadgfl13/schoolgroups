@@ -67,8 +67,8 @@ period9.addEventListener('click', ()=>{
 
 
     if(bottomright.innerHTML){
-        period_9 =[' Jaden','Troy','Ariel', 'Alina','Jackson','Olivia','Toryn','Datavion','Candace','Jayda','Gabbie','Abbie','Callie','Jordan','Takayla','Emil'
-        , 'Rodney']
+        period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
+, ' Rodney']
         makebuttons9()
     }
     else{
@@ -108,6 +108,12 @@ let reset = document.createElement('button')
 reset.innerHTML = 'Reset'
 reset.setAttribute('id', 'selectperiod')
 bottomleft.append(reset)
+reset.addEventListener('mouseover', ()=>{
+    reset.style.backgroundColor = 'red'
+})
+reset.addEventListener('mouseleave', ()=>{
+    reset.style.backgroundColor = 'rgb(182, 193, 182)'
+})
 reset.addEventListener('click',()=>{
     location.reload()
 })
@@ -167,6 +173,12 @@ return    }
     bottomleft.innerHTML = ''
     let reset2 = document.createElement('button')
     reset2.innerHTML = 'RESET'
+        reset2.addEventListener('mouseover',()=>{
+            reset2.style.border = '2px solid yellow'
+        })
+        reset2.addEventListener('mouseleave',()=>{
+            reset2.style.border = 'none'
+        })
     reset2.setAttribute('id','reset2')
     reset2.addEventListener('click',()=>
     location.reload())
@@ -186,6 +198,12 @@ return    }
     bottomleft.innerHTML = ''  
     let reset2 = document.createElement('button')
     reset2.innerHTML = 'RESET'
+    reset2.addEventListener('mouseover',()=>{
+        reset2.style.border = '2px solid yellow'
+    })
+    reset2.addEventListener('mouseleave',()=>{
+        reset2.style.border = 'none'
+    })
     reset2.setAttribute('id','reset2')
     reset2.addEventListener('click',()=>
     location.reload())
@@ -203,6 +221,12 @@ return    }
     bottomleft.innerHTML = ''
     let reset2 = document.createElement('button')
     reset2.innerHTML = 'RESET'
+    reset2.addEventListener('mouseover',()=>{
+        reset2.style.border = '2px solid yellow'
+    })
+    reset2.addEventListener('mouseleave',()=>{
+        reset2.style.border = 'none'
+    })
     reset2.setAttribute('id','reset2')
     reset2.addEventListener('click',()=>
     location.reload())
