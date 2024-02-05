@@ -84,7 +84,7 @@ period9.addEventListener('click', ()=>{
 //----------------button to create period 4
 let period4 = document.createElement('button')
 period4.setAttribute('id', 'selectperiod')
-period4.innerHTML = 'Period 4'
+period4.innerHTML = 'Period 2'
 bottomleft.append(period4)
 period4.addEventListener('click', ()=>{
     period = 4
