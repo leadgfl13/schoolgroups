@@ -4,12 +4,12 @@ let bottomleft=document.getElementById('bottomleft')
 let topright =document.getElementById('topright')
 
 //--------------------the rosters------------------------
-let period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
-, ' Rodney']
+let period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',
+' Abbie',' Callie',' Jordan',' Takayla',' Emil',' Rodney', 'James', 'Carson', 'Logan']
 
 
 period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
-' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah', 'Claire', 'Logan',]
 
 
 //--------------------function formaking student cards appear
