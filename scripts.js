@@ -9,13 +9,11 @@ let period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',
 
 
 period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
-' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah', 'Claire', 'Logan',]
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah', 'Claire', 'Logan']
 
 
 //--------------------function formaking student cards appear
 function makebuttons9(){
-    console.log('hello')
-    console.log()
     bottomright.innerHTML = ''
     for(let i =0; i<period_9.length; i++){
         let card = document.createElement('button')
@@ -64,20 +62,11 @@ period9.setAttribute('id', 'selectperiod')
 period9.innerHTML = 'Period 9'
 bottomleft.append(period9)
 period9.addEventListener('click', ()=>{
-
-
-    if(bottomright.innerHTML){
-        period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
-, ' Rodney']
-        makebuttons9()
-    }
-    else{
-         period_9=[' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',' Abbie',' Callie',' Jordan',' Takayla',' Emil'
-, ' Rodney']
-        makebuttons9()
+ period_9 = [' Jaden',' Troy',' Ariel', ' Alina',' Jackson',' Olivia',' Toryn',' Datavion',' Candace',' Jayda',' Gabbie',
+' Abbie',' Callie',' Jordan',' Takayla',' Emil',' Rodney', 'James', 'Carson', 'Logan']
     makebuttons9()
         }
-    })
+)
 
 
 
@@ -87,21 +76,13 @@ period4.setAttribute('id', 'selectperiod')
 period4.innerHTML = 'Period 2'
 bottomleft.append(period4)
 period4.addEventListener('click', ()=>{
-    period = 4
-    if(bottomright.innerHTML){
-        period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
-' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
-
-        makebuttons4()
-    }
     
-    else{
-        period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
-' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah']
+period_4 = [' Angelo',' Landyn',' Owen',' Zach',' John',' Jackson',' Matt',' Amarah',' Kiana',' Lili',' Nadia',' Javier',' Kerrigan',
+' Josiash',' Jenna',' Miranda',' Damien',' Gabe',' Iziah',' Neveah', 'Claire', 'Logan']
 
     makebuttons4()
  }
-    })
+    )
 
 //--------check button just to make sure that there is a record of which group is selected
 let reset = document.createElement('button')
