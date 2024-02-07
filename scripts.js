@@ -29,7 +29,7 @@ function makebuttons9(){
         card.addEventListener('mouseleave',()=>{
             card.innerHTML=period_9[i]
             card.style.backgroundColor = 'gray'
-            card.style.border = 'none'
+            card.style.border = '2px solid black'
 
         })
         card.addEventListener('click',()=>{
@@ -54,7 +54,7 @@ function makebuttons4(){
         card.addEventListener('mouseleave',()=>{
             card.innerHTML = period_4[i]
             card.style.backgroundColor ='gray'
-            card.style.border = ' none'
+            card.style.border = '2px solid black'
 
         })
         card.addEventListener('click',()=>{
